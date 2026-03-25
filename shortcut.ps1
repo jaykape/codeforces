@@ -1,7 +1,7 @@
 function jay {
     param (
         [int]$num,
-        [string]$letter
+        [string]$letter,
         [string]$ext
     )
 
