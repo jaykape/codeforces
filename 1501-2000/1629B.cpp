@@ -12,27 +12,20 @@ int main()
         cin >> l >> r >> k;
         long long n = r - l + 1;
 
-        if (r == 1)
-            cout << "NO" << endl;
-        else if (r == l)
+        if (r == l)
+        {
+            if (r == 1)
+                cout << "NO" << endl;
+            else
+                cout << "YES" << endl;
+            continue;
+        }
+
+        long long odds = (r + 1) / 2 - l / 2;
+        if (k >= odds)
             cout << "YES" << endl;
         else
-        {
-            if (n % 2 == 0 || l % 2 == 0)
-            {
-                if (k >= n / 2)
-                    cout << "YES" << endl;
-                else
-                    cout << "NO" << endl;
-            }
-            else
-            {
-                if (k >= n / 2 + 1)
-                    cout << "YES" << endl;
-                else
-                    cout << "NO" << endl;
-            }
-        }
+            cout << "NO" << endl;
     }
     return 0;
 }
