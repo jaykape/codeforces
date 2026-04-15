@@ -1,3 +1,5 @@
+import sys
+
 n = int(input())
 
 
@@ -20,6 +22,10 @@ def smallestDivisor(n: int):
 
 ans = 1
 powers = []
+
+if n == 1:
+    print(1, 0)
+    sys.exit(0)
 
 while n > 1:
     p = smallestDivisor(n)
